@@ -1,16 +1,29 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { ArrowRight, Clock, TrendingUp, Briefcase, PieChart } from 'lucide-react'
-import Image from "next/image"
-import Link from "next/link"
+import { motion } from "framer-motion";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import {
+  ArrowRight,
+  Clock,
+  TrendingUp,
+  Briefcase,
+  PieChart,
+} from "lucide-react";
+import Image from "next/image";
 
 const blogs = [
   {
     title: "Understanding Market Volatility: A Guide for Investors",
-    description: "Learn how market volatility affects your investments and strategies to navigate through turbulent times.",
+    description:
+      "Learn how market volatility affects your investments and strategies to navigate through turbulent times.",
     image: "/placeholder.svg?height=200&width=400",
     date: "March 15, 2024",
     readTime: "5 min read",
@@ -19,7 +32,8 @@ const blogs = [
   },
   {
     title: "The Future of Investment Banking in 2024",
-    description: "Explore emerging trends and technological innovations shaping the investment banking landscape.",
+    description:
+      "Explore emerging trends and technological innovations shaping the investment banking landscape.",
     image: "/placeholder.svg?height=200&width=400",
     date: "March 12, 2024",
     readTime: "7 min read",
@@ -28,14 +42,15 @@ const blogs = [
   },
   {
     title: "Portfolio Diversification Strategies",
-    description: "Discover effective ways to diversify your investment portfolio and minimize risk while maximizing returns.",
+    description:
+      "Discover effective ways to diversify your investment portfolio and minimize risk while maximizing returns.",
     image: "/placeholder.svg?height=200&width=400",
     date: "March 10, 2024",
     readTime: "6 min read",
     category: "Investment Strategy",
     icon: PieChart,
   },
-]
+];
 
 export function BlogSection() {
   return (
@@ -81,7 +96,9 @@ export function BlogSection() {
                     <blog.icon className="h-4 w-4" />
                     {blog.category}
                   </div>
-                  <CardTitle className="text-xl font-bold mb-2">{blog.title}</CardTitle>
+                  <CardTitle className="text-xl font-bold mb-2">
+                    {blog.title}
+                  </CardTitle>
                   <CardDescription className="text-gray-600 mb-4">
                     {blog.description}
                   </CardDescription>
@@ -124,6 +141,5 @@ export function BlogSection() {
         </motion.div>
       </div>
     </section>
-  )
+  );
 }
-
